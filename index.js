@@ -22,7 +22,11 @@ app.use(
 // Default middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    credentials: true,
+  })
+);
 
 // Connect to database
 connectDB();
