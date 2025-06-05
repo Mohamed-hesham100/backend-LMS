@@ -22,7 +22,12 @@ app.use(
 // Default middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: "https://frontend-lms-f775.vercel.app", // عنوان الفرونت من Vercel
+    credentials: true,
+  })
+);
 
 // Connect to database
 connectDB();
